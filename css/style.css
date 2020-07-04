@@ -1,0 +1,12 @@
+*{ margin: 0; padding: 0; box-sizing: border-box; font-family: 'Josefin Sans', sans-serif;}
+
+  .carousel-inner img {
+    width: 100%;
+    /* the % attribute shits the side bar alternatively as the image changes, however the vh attribute keeps the buttons fixed*/
+    height: 100vh;
+  }
+  .aboutprofileimg{
+  	width: 100%;
+  	height: 500px!important
+  	/* !important tags superimposes the img-fluid class*/
+  }
