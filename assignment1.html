@@ -69,10 +69,52 @@
       </div>
       <div class="w-50 m-auto">
         <h4 class="text-left"> Attempt 1: Using Wordpress </h4>
-        <p> Installing MAMP and then creating a MYSQL database in the MAMP using Wordpress.
-          Accessing MAMP main panel: localhost:port/MAMP/index.php (replace port with port of your Apache server)
-          Goto phpadmin, create a new database with the name wordpress.
+        <p> Installed MAMP and then created a MYSQL database in the MAMP with the name Wordpress.
+          To Access MAMP main panel: localhost:port/MAMP/index.php (replace port with port of your Apache server)
+          Goto phpadmin, create a new database with the name wordpress(as shown in the pic below)
         </p>
+        <img src="images/attempt1-1.png" class="img-fluid" ><p class = "text-center mb-2 font-italic">Database creation using Wordpress</p><img>
+        <p class="mb-2"> Download the wordpress package, unzip it and goto the MAMP. In MAMP, we replace the path to the root folder with the wordpress folder and then start the servers. Open the website 'localhost:port' it will redirect to the wordpress, install the wordpress(data is stored in the 'wordpress' table in mysql). </p>
+        <p class = "mb-4"> However, once I had setup the Wordpress, I moved onto editing the code and that was too complex for me and I didn't understand code. Although I was fascinated by the wordpress and wanted to create the webpage using wordpress but this would have defeated the purpose of assignment, so I started learning php and <b>building everything from scratch</b></p>
+
+        <h4 class="text-left"> Attempt 2: Using php/mysql/bootstrap </h4>
+        <!--HTML hyperlink here-->
+        <p class="text-left mb-4"> The Video tutorial followed is given <a href="https://www.youtube.com/watch?v=pFup_R4150g">here</a>, and <a href="https://www.w3schools.com/bootstrap4/">W3schools for Bootstrap</a></p>
+        <h5 class="text-left"> (2.1) Setting up the environment</h5>
+        <p>Created Index.php, About.php, Style.css and a basic HTML Page and starting up MAMP Apache servers</p>
+        <img src="images/attempt2-1.png" class="img-fluid" ><p class = "text-center mb-2 font-italic"> Basic Page using PhP</p><img>
+        <h5 class="text-left"> (2.2) Implementation of Basic Components </h5>
+        <p> I Started with Implementation of navigation bar using bootstrap. </p>
+        <p class="text-danger"> Mistake 1:</p>
+        <p> Had put the initial library import of Bootstrap in title tag. For Bootstrap to run properly, put the library in the head tag but outside of title tag as visible in the image below</p>
+        <img src="images/attempt2-2.png" class="img-fluid" ><p class = "text-center mb-4 font-italic">MetaData for BootStrap</img>
+        <p class="text-danger"> Changing Colour:</p>
+        <p>Then I changed the background colour of the navigation bar: change 'bg-dark' to 'bg-light' for light colour </p>
+        <img src="images/attempt2-3.png" class="img-fluid"><p class="text-center mb-2 font-italic">Dark colour Navbar</p></img>
+        <img src="images/attempt2-4.png" class="img-fluid"><p class="text-center mb-4 font-italic">Light colour Navbar</p></img>
+        <p class="text-danger"> Adding Caraousel and Assingments/Projects Section:</p>
+        <p> Further, I procedded to add Caraousel using W3 school tutorial and also modified the navigation bar to include the <b>assignments and projects</b> section  </p>
+              <img src="images/attempt2-5.png" class="img-fluid"><p class="text-center mb-2 font-italic"> Added Caraousel</p></img>
+              <img src="images/attempt2-6.png" class="img-fluid"><p class="text-center mb-4 font-italic"> Added Assignments & Projects Section </p></img>
+        <h5 class="text-left"> (2.3) About Me section </h5>
+        <p>Created about me section using Bootstrap. I have divided the website into two parts of 6 grids each, the left contains an image and the right component includes heading and a brief summary about me as visible in the snapshot below</p>
+        <img src="images/attempt2-7.png" class="img-fluid"><p class="text-center mb-4 font-italic"> Snapshot of 'About Me' section</p></img>
+        <h5 class="text-left"> (2.4) Contact me section </h5>
+        <p>Created a form for storing the information using 'form' in bootstrap. The form takes 'Name', 'Email', 'Purpose' in the details and stores them in MySQL table named userinfo. Atlast a footer was added in the page</p>
+        <img src="images/attempt2-8.png" class="img-fluid"><p class="text-center mb-4 font-italic"> Snapshot of 'Contact Me & Footer'</p></img>
+        <h5 class="text-left"> (2.5) Image Compression</h5>
+        <p class="mb-4">Most of the images used in the website we under <b>50 kb</b>, however the profile image was around 2 mb and was compressed using an <a href="https://imagecompressor.com/">online image compressor</a></p>
+        <h5 class="text-left"> (2.6) Hosting</h5>
+        <p class="mb-4">Since the page was coded using Php and Mysql, so initially I looked for a reliable service that hosted an Apache and MYSQL server. However, all the services were paid(free ones were not reliable). So for the purposes of this assignment, I <b>converted the code to HTMl and hosted using Github Pages</b></p>
+        <h5>Php code is stored <a href="https://drive.google.com/file/d/1aXV6d6XT60ho3oxJo3yjLMEaKGBOuAZD/view?usp=sharing">here</a></h5>
+        <h5>The final website is available <a href="index.html">here</a></h5>
+        
+        
+        
+        
+
+
+
         
       </div>
     </section>
