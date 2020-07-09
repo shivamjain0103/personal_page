@@ -8,9 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
   </head>
-
   <body>
-
     <!-- This is the code for the navigation bar in the upper front panel -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">Shivam Jain </a>
@@ -71,26 +69,104 @@
         <h3 class="text-center">Assignment 4</h3>
       </div>
       <div class="w-50 m-auto">
-        <p> The assignement 4 is not yet uploaded <a href="">here</a></p>
-      </div>
+        <p> The Word documentation of assignement 4 is available <a href="https://docs.google.com/document/d/1eS5KydCEz6gdixq4sKq64PE56Qfd4qdzNza_UFzeoso/edit?usp=sharing">here</a></p>
+        <h3 class="mb-4">Problem Statement</h3>
+        <p class="test-justify mb-2">A. What are the different sensors in your phone and what do they do? Use Science Journal App to conduct an experiment to measure and analyze the data from a sensor and report your findings.</p>
+        <p class="test-justify mb-4">B. Combine an input and output device together and collect data for an activity connected to you. Analyze that data and make sense of it. e.g. some examples could be displaying output from temperature/RH sensor on LCD Display to find the thermal comfort in your room, sounds of different frequencies from the Buzzer as the distance computed from a proximity sensor varies, Dustbin (full vs. half vs. empty) shows LED to be RED, YELLOW, GREEN. Please documents the steps and create a video /screenshots showing the interaction between the input and the output devices. Please also upload the codes used.</p>
+        <h3 class="mb-4">Part A</h3>
+        <p class="test-justify mb-2">The ‘Science journal’ app detected 8 sensors in my phone and they are:</p>
+        <ol>
+          <li>Light Sensor
+            <li>Decibel Sensor</li>
+            <li>Pitch sensor</li>
+            <li>Magenometer</li>
+            <li>Linear Accelerometer</li>
+            <li>X accelerometer</li>
+            <li>Y accelerometer</li>
+            <li>Z accelerometer</li>
+          </ol>
+          <h4 class="mb-4">Light Sensor & Sound Senor</h4>
+          <p class="test-justify mb-2">Initially I switched off all the sources of light in the room and then switched them on, one-by-one and light sensor data did actually record an increase in the ambient light intensity. Similarly, for testing the sound sensor, initially I simulated pin drop silence in the room and then turned on the speech on my laptop. As expected, the sound levels increased with the speech.</p>
+          <div class="container-fluid mb-4">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-12">
+                <img src="images/A4-graphs/Light_sensor.png" class="img-fluid">
+              </div>
+              <div class="col-lg-6 col-md-6 col-12">
+                <img src="images/A4-graphs/Sound_sensor.png" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <h4 class="mb-4">Pitch & Magnetometer</h4>
+          <p class="test-justify mb-2">In Silence the pitch is Zero, for a notification tone, we observe a spike in the pitch and when the speech starts, then we can clearly see the signal in the speech. Similarly, for the magnetometer, when the phone is in vertical direction the value of magnetic field is smaller and as we change the direction of the phone, the magnetic field increases.</p>
+          <div class="container-fluid mb-4">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-12">
+                <img src="images/A4-graphs/pitch.png" class="img-fluid">
+              </div>
+              <div class="col-lg-6 col-md-6 col-12">
+                <img src="images/A4-graphs/Magenetometer.png" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <h4 class="mb-4">Linear and Z - acceleration</h4>
+          <p class="test-justify mb-2">When the phone is stable and not moving, then it shows zero linear acceleration and constant acceleration in z-direction(9.8m/s*s). However, as soon as we start shaking the phone, we observe changes in the linear and z-acceleration.</p>
+          <div class="container-fluid mb-4">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-12">
+                <img src="images/A4-graphs/Linearaccleration.png" class="img-fluid">
+              </div>
+              <div class="col-lg-6 col-md-6 col-12">
+                <img src="images/A4-graphs/Z_acc.png" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <h4 class="mb-4">X and Y acceleration</h4>
+          <p class="test-justify mb-2">No movement shows constant acceleration in X,Y direction(which is essentially zero), when we start to & fro movement, we essentially observe a sine wave like pattern.</p>
+          <div class="container-fluid mb-6">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-12">
+                <img src="images/A4-graphs/X_acc.png" class="img-fluid">
+              </div>
+              <div class="col-lg-6 col-md-6 col-12">
+                <img src="images/A4-graphs/Y_acc.png" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <h3 class="mb-4">Part B</h3>
+          <h4 class="mb-4">Objective: Automatically Opening Dustbin</h4>
+          <p class="test-justify mb-4">We created the mechanism for an automatic dustbin. Whenever the person comes in front of the dustbin, the dustbin is able to automatically open on its own. For the purpose of this assignment we have set the maximum distance for which the dustbin opens to be 25cm.</p>
+          <h4 class="mb-4">Components Required</h4>
+          <ol class="mb-4">
+            <li>Arduino Uno</li>
+            <li>SR04 ultrasonic sensor</li>
+            <li>Servo Motor</li>
+            <li>Jumper wires(for connection)</li>
+            <li>Dustbin</li>
+          </ol>
 
-    </section>
+          <h4 class="mb-4">Connections and Coding the Board</h4>
+          <p class="test-justify mb-2">Using the Arduino, we interface the ultrasonic sensor and servo motor. We use ‘SR04.h’ and ‘Servo.h‘ libraries for controlling the ultrasonic sensor and servo motor respectively. Connect the power supply of +5V and GND across the SR04 and servo. Now connect ‘Trigger pin to Pin 12’ and ‘Echo pin to Pin 11’ of SR04 and ‘control pin to pin 9’ of the servo motor and upload the code available <a href="https://drive.google.com/file/d/1FAt7sxV1LWqrz6bKScIWAs22LLr0dwH-/view?usp=sharing">here</a> to the arduino.</p>
+          <p class="test-justify mb-2">Now place the ultrasonic sensor and servo motor at the images shown in the picture</p>
+          <div class="mb-4 container-fluid">
+            <img src="images/Dustbin_Visual.png" class="img-fluid"></img>
+          </div>
+          <p class="test-justify mb-2">Now, as we place the leg in front of the dustbin(in the vicinity of 25 cms), we will see that the dustbin opens. The demonstration of the same is given in the following video.(due to unavailability of dustbin, the demonstration is shown using rotation of servo motor only)</p>
+          <div class="embed-responsive embed-responsive-16by9 mb-4">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/03Wxww9lu54" allowfullscreen></iframe>
+          </div>
+          <h4 class="mb-4">Problems Faced</h4>
+          <p class="test-justify mb-2">If someone is passing by the dustbin, we have to detect that and do not open the dustbin in that case. So if the person is standing in front of the dustbin(aka ultrasonic sensor) for more than 1 seconds, then only the dustbin will open</p>
+          <p class="test-justify mb-2">Error values in Inputs of Ultrasonic sensor: At some time points the error values(abnormally large distance values although the object was right in front) were coming in the output of the ultrasonic sensor, to avoid that, we considered the 3 time points before and 3 time points after the current values and if 5 (out of 7) suggest that any object was present in front of ultrasonic sensor, we open the dustbin.</p>
 
 
 
+        </div>
 
 
-
-
-
-
-
-
-
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-  </body>
-</html>
+      </section>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    </body>
+  </html>
